@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn-group button {
+          background-color: #c5310c; /* Green background */
+          border: 1px solid green; /* Green border */
+          color: white; /* White text */
+          padding: 10px 24px; /* Some padding */
+          cursor: pointer; /* Pointer/hand icon */
+          width: 50%; /* Set a width if needed */
+          display: block; /* Make the buttons appear below each other */
+        }
+        
+        .btn-group button:not(:last-child) {
+          border-bottom: none; /* Prevent double borders */
+        }
+        
+        /* Add a background color on hover */
+        .btn-group button:hover {
+          background-color: #f83d04;
+        }
+        #output{
+        font-size: larger;
+        color: blue;
+        font-style: italic;
+        }
+        </style>
+
+
+</head>
+<body>
+
+    <h1>Tabelline</h1>
+
+    <div class="btn-group">
+      <button onclick="tabellinadel2()">Tabellina del 2 </button>
+      <button onclick="Tabellina(3)">Tabellina del 3</button>
+      <button onclick="TabellinaMath(4)">Tabellina del 4</button>
+    </div>
+
+    <p id="output">......</p>
+
+
+
+<script>  
+function tabellinadel2Alert() {
+    alert("2 4 6 8 10 12 14 16 18 20");
+}
+function tabellinadel2() {
+    document.getElementById("output").innerHTML="2 4 6 8 10 12 14 16 18 20";
+}
+function Tabellina(tab) {
+  var risultato="";
+  
+  if (tab==2)
+{
+risultato="2 4 6 8 10 12 14 16 18 20";
+
+}
+if (tab==3)
+{
+risultato="3 6 9 12 15 18 20 22 24 27 30";
+
+}
+if (tab==4)
+{
+risultato="4 8 12 16 20 24 28 32 36 40";
+
+}
+
+
+
+document.getElementById("output").innerHTML=risultato;
+return risultato;
+
+}
+
+function TabellinaMath(tab) {
+  var risultato="";
+  var r=tab;
+for(let i=0;i<11;i++)
+{
+
+r=r+tab;
+ risultato=risultato+" "+r;
+
+}
+  
+document.getElementById("output").innerHTML=risultato;
+return risultato;
+
+}
+
+
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>
