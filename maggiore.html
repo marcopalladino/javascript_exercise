@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maggiore di tre numeri</title>
+
+</head>
+<body>
+    <p>Trova il maggiore</p>
+<label for="">primo numero</label>    
+<input id='primo' type="text"> <br>
+<label for="">secondo numero</label>    
+<input id='secondo' type="text"> <br>
+<label for="">terzo numero</label>    
+<input id='terzo' type="text"><br>
+<button onclick="trovamaggiore()">Trova il maggiore</button>
+
+<p>Il massimo è:</p>
+<p id='ris'></p>
+
+<script>
+
+function trovamaggiore() {
+    let primo,secondo,terzo;
+
+    let massimo;
+   primo=document.getElementById('primo').value;
+   secondo=document.getElementById('secondo').value;
+   terzo=document.getElementById('terzo').value;
+ if (primo>secondo)
+ {
+     massimo=primo;
+ }
+ else
+ {
+     massimo=secondo;
+ }
+
+ if (terzo>massimo)
+ {massimo=terzo;}
+
+document.getElementById('ris').innerHTML=massimo;
+}
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
